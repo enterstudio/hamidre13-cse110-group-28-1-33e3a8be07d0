@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+  <RelativeLayout 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="32dp"
+            android:text="Title: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/descriptionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titleView"
+            android:layout_below="@+id/titleView"
+            android:layout_marginTop="14dp"
+            android:text="Description: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/titleContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/descriptionView"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="18dp"
+            android:layout_toRightOf="@+id/titleView"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:layout_below="@+id/showSchedule"
+            android:layout_alignRight="@+id/titleContent"
+            android:text="Delete" />
+
+        <TextView
+            android:id="@+id/descriptionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/descriptionView"
+            android:layout_alignRight="@+id/titleContent"
+            android:layout_below="@+id/descriptionView"
+            android:layout_marginTop="16dp"
+            android:scrollbars="vertical" 
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <TextView
+            android:id="@+id/showSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBox1"
+            android:layout_marginTop="16dp"
+            android:layout_alignLeft="@+id/checkBox1"
+            android:text="1 Week"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titleView"
+            android:layout_below="@+id/descriptionContent"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:text="on-schedule" />
+
+        <Button
+            android:id="@+id/setInactiveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/deleteBtn"
+            android:layout_alignBottom="@+id/deleteBtn"
+            android:layout_toLeftOf="@+id/deleteBtn"
+            android:text="Set Inactive" />
+
+        <Button
+            android:id="@+id/setActiveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/setInactiveBtn"
+            android:layout_alignBottom="@+id/setInactiveBtn"
+            android:layout_alignParentLeft="true"
+            android:text="Set Active" />
+
+    </RelativeLayout>
+
+</ScrollView>
